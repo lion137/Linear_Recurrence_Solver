@@ -1,1 +1,1 @@
-Copyleft 2018 lion137 
+Copyleft 2018, by lion137 
