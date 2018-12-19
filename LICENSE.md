@@ -1,4 +1,4 @@
-Copyleft 2018, by lion137, also     
+Copyleft 2018, by lion137, also, ideas based on  Stepano's "From Mathematics to Generic Programming"         
 
 Copyright (c) 2014 Alexander A. Stepanov and Daniel E. Rose    
 Permission to use, copy, modify, distribute and sell this software    
