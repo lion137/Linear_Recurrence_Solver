@@ -15,5 +15,10 @@ Examples, also, given in ```tests```.
 For longer formulas, like, a hundred coefficients, there is an overhead of matrix multiplication done    
 in ```O(n^3)``` time, so it be little bit slower.    
 
+Compiled in gcc c++17, usage(from example above):    
+```recurrence_solver(10, c, y)``` - returns the 10th value of recurrence above, which is: ```1849```.     
+
+    
+
 
 

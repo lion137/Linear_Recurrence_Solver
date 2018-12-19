@@ -10,7 +10,7 @@
 using namespace std; 
 
 
-template <Regular A, Integer N, Operation Op>
+template <Regular A, Integer N, Operation Op> // power
 A power(A a, N n, Op op) {
 	if (n == 0) return identity(a);
 		
@@ -22,6 +22,23 @@ A power(A a, N n, Op op) {
 	return power_accumulate(a, op(a, a), half(n - 1), op);
 }
 
+template <Integer N, Integer M>  //recurrence solver
+N recurrence_solver(M n, std::vector<N> a, std::vector<N> initial){
+	int length = a.size();
+	matrix<N> A(length, std::vector<N>(length));
+	for (int i = 0; i < length; i++)
+		A[0][i] = a[i];
+	for (int i = 1; i < length; i++) {
+		for (int j = 0; j < length; j++) {
+			if (i - j == 1)
+				A[i][j] = 1;
+		}
+	}
+	reverse(initial.begin(), initial.end());
+	return matr_vec_mul(power(A, n + 1 - length, mul_mat<N>()), initial)[0];
+}
+
+/* --------------- HELPER FUNCTIONS ----------------------*/
 
 template <Regular N> 
 matrix<N> matr_mul(matrix<N> A, matrix<N> B){ // only square
@@ -79,21 +96,7 @@ A fibonacci(A n) {
 	return R[1][0];
 }
 
-template <Integer N, Integer M> 
-N recurrence_solver(M n, std::vector<N> a, std::vector<N> initial){
-	int length = a.size();
-	matrix<N> A(length, std::vector<N>(length));
-	for (int i = 0; i < length; i++)
-		A[0][i] = a[i];
-	for (int i = 1; i < length; i++) {
-		for (int j = 0; j < length; j++) {
-			if (i - j == 1)
-				A[i][j] = 1;
-		}
-	}
-	reverse(initial.begin(), initial.end());
-	return matr_vec_mul(power(A, n + 1 - length, mul_mat<N>()), initial)[0];
-}
+
 
 // matrix * vector, square matrix
 template <Regular T>
@@ -122,8 +125,7 @@ template <Regular T>void printMatrix(matrix<T> A){
 }
 	
 	
-	
-	
+
 	
 	
 	

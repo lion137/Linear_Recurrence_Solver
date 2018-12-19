@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <cassert>
-
+#include <forward_list>
 
 #include "solver.cpp"
 #include "solver.h"
@@ -90,10 +90,6 @@ long f(long n){
 		return -2 * g(n - 2) - 3 *  g(n - 1) ;
 }
 
-long fibonacci2(long n){
-	return recurrence_solver(n, vector<long>{1, 1}, vector<long>{0, 1});
-}
-
 void testLinearRecurrenceSolver(){
 	vector<long> vv{2, 0, 3}; // recurrence f
 	vector<long> in{0, 1, 2};
@@ -104,10 +100,14 @@ void testLinearRecurrenceSolver(){
 	vector<long> vv2{-3, -2}; // recurrence g
 	vector<long> in2{0, 1};
 	assert (recurrence_solver(20, vv2, in2) == g(20));
+	vector<long> vv3{3, 0, 0, -5}; // recurrence g
+	vector<long> in3{0, 1, 1, 2};
+	assert (recurrence_solver(10, vv3, in3) == 1849);
 }
 
-int main () {
-	
+
+
+int main () { 
     cout << "---------------------------\n";
 	run_test(testMatrixMul);
 	run_test(testPowerNumber);
@@ -115,7 +115,7 @@ int main () {
 	run_test(testFibonacci);
 	run_test(testMatrixVectorMul);
 	run_test(testPrintMatrix);
-	run_test(testLinearRecurrenceSolver)
+	run_test(testLinearRecurrenceSolver);
 	cout << "---------------------------\n";
 	cout << "Tests Passed!\n";
 	return 0;

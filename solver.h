@@ -52,4 +52,7 @@ std::vector<T> matr_vec_mul(matrix<T> A, std::vector<T> V);
 // debugging helper, prints matrix
 template <Regular T>void printMatrix(matrix<T> A);
 
+// additional, built upon, multilplication modulo
+
+
 #endif
