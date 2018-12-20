@@ -51,7 +51,6 @@ N recurrence_solver_modulo(N n, std::vector<N> a, std::vector<N> initial, N mod)
 		}
 	}
 	
-	N k(length - 1);
 	if ( n < initial.size()) return initial[n] % mod;
 	reverse(initial.begin(), initial.end());
 	return matr_vec_mul_mod(power_modulo(A, n + 1 - length, mod,  mul_mat_mod<N, N>()), initial, mod)[0];
