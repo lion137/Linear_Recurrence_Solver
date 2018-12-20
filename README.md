@@ -21,8 +21,8 @@ Compiled in gcc c++17, usage(from example above, and Fibonacci):
 
 ```recurrence_solver(10, c, y)``` - returns the 10th value of recurrence above, which is: ```1849```.          
 
-```recurrence_solver_modulo(1234567891011, std::vector<long>{1L, 1L}, std::vector<long>{0L, 1L}, 1000000007L)``` - gives    
-```1234567891011th``` Fibonacci number modulo ```1000000007```, which is ```316399615```. 
+```recurrence_solver_modulo(1234567891011, std::vector<long>{1L, 1L}, std::vector<long>{0L, 1L}, 1000000007L)``` 
+gives the ```1234567891011th``` Fibonacci number modulo ```1000000007```, which is ```316399615```.  Those functions take the same types for all their parameters, : ```(T, std::vector<T>, std::vector<T>, T)```. This is not perfect from the theory point of view (first parameter could be Regular type, while other suppose to be Integers), but it's OK, we computing recurrences in natural numbers.    
 
 Could be used in competitive programming and mathematics, also may help students studying recurrence and/or induction, etc...    
 
