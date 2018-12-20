@@ -186,7 +186,7 @@ void testRecurrenceSolverModulo() {
 	
 	vector<long> aa{5, 7};
 	vector<long> cc{11, 13}; // recurrence cr
-	cout << endl; cout << cr(13)  << endl;
+	
 	for (long i = 0; i < 13; i++){
 		assert(recurrence_solver_modulo(i, aa, cc, 13L) == (cr(i) % 13));
 	}	

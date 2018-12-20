@@ -29,6 +29,8 @@ N recurrence_solver_modulo(N n, std::vector<N> a, std::vector<N> initial, N mod)
 template <Regular A, Integer N, Operation Op> // power modulo 
 A power_modulo(A a, N n, N mod, Op op);
 
+
+
 /* ------------ MATRIX FUNCTIONS ----------------*/
 
 template <Regular N> matrix<N> matr_mul(matrix<N> A, matrix<N> B); // matrix multiplication
@@ -99,7 +101,7 @@ A power_accumulate(A r, A a, N n, Op op); // accumulator - power helper
 template <Regular A, Integer N, Operation Op> // modulo accumulator
 A power_accumulate_mod(A r, A a, N n, N mod, Op op);
 
-// debugging helper, prints matrix
+// debugging, prints matrix
 template <Regular T>void printMatrix(matrix<T> A);
 
 #endif
