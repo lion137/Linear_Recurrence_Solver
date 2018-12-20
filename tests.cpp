@@ -7,9 +7,6 @@
 
 #include "solver.cpp"
 #include "solver.h"
-//#include "experiments.cpp"
-//#include "Matrix.h"
-//#include "Matrix.cpp"
 
 #define run_test(f_name);\
 	printf("%s\n", #f_name);\
