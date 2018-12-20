@@ -11,8 +11,8 @@ My ```c``` coefficients vector go from left to right which is is irrelevant. We 
 
 Also, solves any linear recurrence modulo m in ```O(logn)``` time. 
 
-Functions are fully generic, so can be easily extended.        
-Examples, also, given in ```tests```.        
+Functions are fully generic, so can be extended without problems. I'm using few ```typedef``` shortcuts to easier navigate   
+between types, they are not truly Concepts - they are not a part of C++, so far.                    
 
 For longer formulas, like, a hundred coefficients, there is an overhead of matrix multiplication done    
 in ```O(n^3)``` time, so it be little bit slower.    
@@ -23,6 +23,12 @@ Compiled in gcc c++17, usage(from example above, and Fibonacci):
 
 ```recurrence_solver_modulo(1234567891011, std::vector<long>{1L, 1L}, std::vector<long>{0L, 1L}, 1000000007L)``` - gives    
 ```1234567891011th``` Fibonacci number modulo ```1000000007```, which is ```316399615```. 
+
+Could be used in competitive programming and mathematics, also may help students studying recurrence and/or induction, etc...    
+
+
+
+
 
 
 
