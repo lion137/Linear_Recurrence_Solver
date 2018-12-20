@@ -34,6 +34,7 @@ N recurrence_solver(M n, std::vector<N> a, std::vector<N> initial){
 				A[i][j] = 1;
 		}
 	}
+	if ( n < initial.size()) return initial[n];
 	reverse(initial.begin(), initial.end());
 	return matr_vec_mul(power(A, n + 1 - length, mul_mat<N>()), initial)[0];
 }
